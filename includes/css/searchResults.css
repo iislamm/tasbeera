@@ -1,0 +1,11 @@
+.results-card{
+  box-shadow: box-shadow:0 1px 6px 0 rgba(0,0,0,0.1);
+}
+.results-card img{
+  position: relative;
+}
+.results-card .results-description{
+  font-weight: lighter;
+  color: gray;
+  padding: 0;
+}
