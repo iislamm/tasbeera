@@ -1,11 +1,27 @@
 .results-card{
-  box-shadow: box-shadow:0 1px 6px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.16);
+  transition: all 0.3s;
+}
+.results-card:hover {
+    box-shadow: 0 2px 15px 5px rgba(0,0,0,.2);
 }
 .results-card img{
-  position: relative;
+  position: absolute;
+  width: 15%;
 }
 .results-card .results-description{
+  position:relative;
   font-weight: lighter;
+  text-align: right;
+  width: 40%;
   color: gray;
-  padding: 0;
+  padding: 20px 0;
+  margin: 10px 0;
+}
+.full-row{
+  grid-row: 1/ -1;
+}
+.grid-row{
+  width: 100%;
+  grid-template-rows: repeat(10, 1fr);
 }
