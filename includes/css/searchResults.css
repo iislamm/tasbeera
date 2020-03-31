@@ -6,6 +6,7 @@
     box-shadow: 0 2px 15px 5px rgba(0,0,0,.2);
 }
 .results-card img{
+  text-align: left;
   position: absolute;
   width: 15%;
 }
@@ -18,10 +19,10 @@
   padding: 20px 0;
   margin: 10px 0;
 }
-.full-row{
-  grid-row: 1/ -1;
-}
-.grid-row{
-  width: 100%;
-  grid-template-rows: repeat(10, 1fr);
+i.fa-angle-right{
+  float: right;
+  position: relative;
+  color: gray;
+  top: -114px;
+  right: 18px;
 }
