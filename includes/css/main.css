@@ -62,6 +62,47 @@ img {
 }
 
 
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+.grid-5 {
+    grid-template-columns: repeat(5, 1fr); 
+}
+
+.grid-6 {
+    grid-template-columns: repeat(6, 1fr); 
+}
+
+.grid-7 {
+    grid-template-columns: repeat(7, 1fr); 
+}
+
+.grid-8 {
+    grid-template-columns: repeat(8, 1fr); 
+}
+
+.grid-9 {
+    grid-template-columns: repeat(9, 1fr); 
+}
+
+.grid-10 {
+    grid-template-columns: repeat(10, 1fr); 
+}
+
+.grid-11 {
+    grid-template-columns: repeat(11, 1fr); 
+}
+
+.grid-12 {
+    grid-template-columns: repeat(12, 1fr); 
+}
+
+
 /*
     A class to give a grid item the full width of the grid container
 */
@@ -378,7 +419,6 @@ footer .social-menu ul li:nth-child(5) a:hover i {
 }
 
 .card-footer .price {
-    font-size: 20px;
     font-weight: 700;
 }
 
@@ -632,6 +672,50 @@ th, td {
     }
 }
 
+.rich-list .list-item  {
+    max-height: 180px;
+    box-shadow: 0 0 4px #b5b5b5;
+    padding: 18px 25px;
+    margin-bottom: 24px;
+}
+
+.rich-list .list-item * {
+    max-height: 100%;
+}
+
+.rich-list .list-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.rich-list .list-item .title {
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.rich-list .list-item p {
+    margin: 0;
+    color: #555555;
+}
+
+.rich-list .list-item .image-container, .rich-list .list-item .actions {
+    display: flex;
+    align-items: center;
+}
+
+.rich-list .list-item img {
+    height: auto
+}
+
+.rich-list .list-item .actions {
+    color: #555555;
+    text-align: right;
+}
+
+.rich-list .list-item .actions * {
+    width: 100%
+}
+
 
 /***************** Forms and sidebars ********************/
 /*
@@ -642,20 +726,37 @@ th, td {
 /*
 some styling to the ul that removes the bullets,margin and adds padding
 */
-ul{
+
+ul {
     list-style-type: none;
-    padding: 25px;
     margin: 0;
+}
+.sidebar-box-shadow {
+    padding: 25px;
+}
+
+.sidebar-box-shadow h4 {
+    margin: 0;
+    margin-bottom: 5px
+}
+
+.sidebar-box-shadow ul {
+    padding-left: 8px;
+    padding-top: 8px
+}
+
+.sidebar-box-shadow .filters * {
+    color: #333333;
+    font-weight: 400;
 }
 /*
 some styling to the li that makes it verticale and other things like font weight and width
 */
-li{
+.sidebar-box-shadow li {
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 600;
-    display: block;
-    width: 60px;
+    margin-bottom: 10px;
 }
 /*
 class that that makes shadow box to the side list and modify the width and height
@@ -668,7 +769,7 @@ aside {
 .sidebar-box-shadow {
     box-shadow:0 1px 6px 0 rgba(0,0,0,0.1);
     position: sticky;
-    top: 0
+    top: 5%
 }
 
 .sidebar-box-shadow a {
@@ -853,10 +954,6 @@ classes that adds makes the signup text position in the center and adds some sty
 .align-button{
     text-align: right;
     padding: 0 25px;
-}
-
-.grid-9 {
-    grid-template-columns: repeat(9, 1fr); 
 }
 
 .addbutton {

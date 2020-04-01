@@ -11,27 +11,75 @@ $(document).ready(function() {
      $('.cart-item .delete').click(function() {
         $($(this).parents()[1]).fadeOut({ duration: 200 })
      })
+     
+     $('.collapsible').click(function() {
+         $(this).toggleClass("active");
+         var content = $(this).parent().next('.order-content')
+         
+         if (content.css('display') === "block") {
+           content.css('display', "none");
+         } else {
+             content.css('display', "block");
+         }
+     })
+
+     $('.filter').click(function() {
+        filter = $(this).attr('name')
+        checked = $(this).is(":checked")
+        items = $('.list-item')
+        switch (filter) {
+            case 'delivery':
+                for (var i = 0; i < items.length; i++) {
+                    var delivery_element = $(items[i]).find('.delivery')[0]
+                    var delivery_text = $(delivery_element).text()
+                    var deliverySpeed = Number(delivery_text.match(/\d\d/)[0])
+                    if (deliverySpeed > 30) {
+                        if (checked) {
+                            $(items[i]).hide()
+                        } else {
+                            $(items[i]).show()
+                        }
+                    }
+
+                }
+                break;
+            case 'rate': 
+                for (var i = 0; i < items.length; i++) {
+                    var rate_element = $(items[i]).find('.rate')[0]
+                    var rate_text = $(rate_element).text()
+                    var rate = Number(rate_text.match(/\d\.\d/)[0])
+                    if (rate < 3) {
+                        if (checked) {
+                            $(items[i]).hide()
+                        } else {
+                            $(items[i]).show()
+                        }
+                    }
+
+                }
+                break;
+            default: // category filter
+                var category = filter
+                for (var i = 0; i < items.length; i++) {
+                    var category_element = $(items[i]).find('.categories')[0]
+                    var category_text = $(category_element).text().toLowerCase()
+                    var category_match = category_text.match(new RegExp(category))
+                    if (!category_match) {
+                        if (checked) {
+                            $(items[i]).hide()
+                        } else {
+                            $(items[i]).show()
+                        }
+                    }
+
+                }
+
+        }
+     })
 })
 
 
-
-
-$('.collapsible').click(function() {
-    $(this).toggleClass("active");
-    var content = $(this).parent().next('.order-content')
-    
-    if (content.css('display') === "block") {
-      content.css('display', "none");
-    } else {
-        content.css('display', "block");
-    }
-})
-
-
-
-
-
-///////////// Form Validation/////////////////////
+/************** Form Validation **************/
 const form = document.getElementById('form');
 const name = document.getElementById('name');
 const email = document.getElementById('email');
