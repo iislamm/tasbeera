@@ -11,6 +11,7 @@ $(document).ready(function() {
      $('.cart-item .delete').click(function() {
         $($(this).parents()[1]).fadeOut({ duration: 200 })
      })
+<<<<<<< HEAD
      
      $('.collapsible').click(function() {
          $(this).toggleClass("active");
@@ -22,6 +23,43 @@ $(document).ready(function() {
              content.css('display', "block");
          }
      })
+=======
+})
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function increaseSlides() {
+  showSlides(slideIndex += 1);
+}
+function decreaseSlides() {
+    showSlides(slideIndex -= 1);
+  }
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+setInterval( increaseSlides, 5000);
+
+
+
+>>>>>>> 8718a4498d9fd7a69298791aeb66b7a1c06c2ba7
 
      $('.filter').click(function() {
         filter = $(this).attr('name')
