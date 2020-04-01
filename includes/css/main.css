@@ -24,35 +24,35 @@ img {
     margin-left: auto;
 }
 
-/* 
-    different sizes for the container in different dispaly sizes 
+/*
+    different sizes for the container in different dispaly sizes
 */
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
     }
 }
-  
+
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
     }
 }
-  
+
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
     }
 }
-  
+
 @media (min-width: 1200px) {
     .container {
         max-width: 90%;
     }
 }
 
-/* 
-    Gemeral class to specify the grid container 
+/*
+    Gemeral class to specify the grid container
 */
 .grid {
     display: grid;
@@ -145,7 +145,7 @@ header {
 }
 .nav-links {
     list-style: none;
-    
+
 }
 
 .top-bar .txt {
@@ -183,13 +183,13 @@ header {
     cursor: pointer;
     font-family: "Poppins",sans-serif;
     display: grid;
-    grid-template-columns: repeat(11, 1fr); 
+    grid-template-columns: repeat(11, 1fr);
 }
 
 .nav-button {
     font-size: 20px;
     font-weight: 600;
-    letter-spacing: .27px; 
+    letter-spacing: .27px;
     box-sizing: border-box;
     text-align: center;
     border: 1px  black;
@@ -204,7 +204,7 @@ header {
     font-size: 36px;
 }
 .nav-button > * {
-    display: inline-block; 
+    display: inline-block;
     text-align: center;
 }
 
@@ -230,7 +230,7 @@ nav .small-btn:last-child {
 footer .social-menu ol {
     margin: 0;
 }
- 
+
 footer .social-menu ol li {
     color: white;
     padding: 20px;
@@ -238,7 +238,7 @@ footer .social-menu ol li {
     display: inline-block;
     font-family:"Poppins", sans-serif;
     cursor: pointer;
-    
+
 }
 
 footer .social-menu {
@@ -247,7 +247,7 @@ footer .social-menu {
     color: white;
     text-align: center;
     height: 20%;
-    margin-top: 36px;    
+    margin-top: 36px;
 }
 
 footer .social-menu ul {
@@ -304,7 +304,7 @@ footer .social-menu ul li:nth-child(5) a:hover i {
     height: 100px;
     background-image: url(../images/copyright-bcg.747f97ed.jpg);
     color: #ffffff
-} 
+}
 
 .footer-part2 p {
     font-family:"Poppins", sans-serif;;
@@ -640,7 +640,7 @@ section:first-child {
 
 
 /*
-some styling to the ul that removes the bullets,margin and adds padding 
+some styling to the ul that removes the bullets,margin and adds padding
 */
 ul{
     list-style-type: none;
@@ -711,7 +711,7 @@ class that adds style to the the input field
     font-weight: 400;
     color: #495057;
     background-color: #fff;
-    background-clip: padding-box; 
+    background-clip: padding-box;
 }
 /*
 class that adds extra styles to the the input field
@@ -730,7 +730,7 @@ class that adds extra styles to the the input field
     font-size: 17px;
 }
 /*
-class that adds width, margin and padding to the form 
+class that adds width, margin and padding to the form
 */
 .area {
     width: 50%;
@@ -741,7 +741,7 @@ class that adds width, margin and padding to the form
     width: 100%;
 }
 /*
-class that adds width, margin and padding to the inner area of the form 
+class that adds width, margin and padding to the inner area of the form
 */
 .filled-cover{
     width: 90%;
@@ -749,7 +749,7 @@ class that adds width, margin and padding to the inner area of the form
     padding-top: 0;
 }
 /*
-class that adds margin between every form group 
+class that adds margin between every form group
 */
 .form-group{
     margin-bottom: 15px;
@@ -758,7 +758,7 @@ class that adds margin between every form group
 }
 
 /*
-class that adds styles to the forget password text 
+class that adds styles to the forget password text
 */
 .form-forget-pass{
     color: #f72d57;
@@ -768,10 +768,10 @@ class that adds styles to the forget password text
     margin-bottom: 30px;
 }
 /*
-classes that adds makes the signup text position in the center and adds some style to the anchor and the text    
+classes that adds makes the signup text position in the center and adds some style to the anchor and the text
 */
 .form-link{
-    padding: 15px 0;     
+    padding: 15px 0;
 }
 .form-text{
     font-size: 14px;
@@ -785,7 +785,7 @@ classes that adds makes the signup text position in the center and adds some sty
     color:#f72d57;
 }
 .custom-select{
-    background-color: white; 
+    background-color: white;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.5);
     width: 25%;
     padding: 10px 0;
@@ -809,10 +809,10 @@ classes that adds makes the signup text position in the center and adds some sty
     visibility: hidden;
 }
 .form-group.success input{
-    border-color:#2ecc71; 
+    border-color:#2ecc71;
 }
 .form-group.error input{
-    border-color:#e74c3c; 
+    border-color:#e74c3c;
 }
 .form-group.success i.fa-check-circle{
     visibility: visible;
@@ -820,12 +820,12 @@ classes that adds makes the signup text position in the center and adds some sty
 }
 .form-group.error i.fa-exclamation-circle{
     visibility: visible;
-    color:#e74c3c; 
+    color:#e74c3c;
 }
 
 .form-group.error small{
     visibility: visible;
-    color:#e74c3c; 
+    color:#e74c3c;
 }
 #addSelect{
     position: sticky;
@@ -838,7 +838,7 @@ classes that adds makes the signup text position in the center and adds some sty
 
 #addSelect:hover{color:black;}
 
-.form .btn-style {
+ .btn-style {
     border: none;
     font-size: 14px;
     font-weight: 600;
@@ -849,4 +849,8 @@ classes that adds makes the signup text position in the center and adds some sty
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
+}
+.align-button{
+    text-align: right;
+    padding: 0 25px;
 }
