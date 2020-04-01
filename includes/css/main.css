@@ -594,11 +594,9 @@ section:first-child {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
 }
   
-<<<<<<< HEAD
+
  .order-item .active:after {
-=======
-.order-content .collapsible.active:after {
->>>>>>> f1a1b3679d6f079bd0adbe10ce95d82cd231bcd4
+
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
