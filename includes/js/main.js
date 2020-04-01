@@ -46,19 +46,20 @@ setInterval( increaseSlides, 5000);
 
 
 
-var coll = document.getElementsByClassName("collapsible");
 
-
-  coll[0].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = document.getElementsByClassName("order-content");
-    console.log(content[0]);
-    if (content[0].style.display === "block") {
-      content[0].style.display = "none";
+$('.collapsible').click(function() {
+    $(this).toggleClass("active");
+    var content = $(this).parent().next('.order-content')
+    
+    if (content.css('display') === "block") {
+      content.css('display', "none");
     } else {
-      content[0].style.display = "block";
+        content.css('display', "block");
     }
-  });
+})
+
+
+
 
 
 ///////////// Form Validation/////////////////////
@@ -186,7 +187,6 @@ addselect.addEventListener("click",(e)=>{
    
 });
 
-
-
-
-
+function isprice(price) {
+    return /^([0-9])\w+/.test(price);
+}
