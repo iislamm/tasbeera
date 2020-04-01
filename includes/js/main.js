@@ -15,7 +15,19 @@ $(document).ready(function() {
 
 
 
+var coll = document.getElementsByClassName("collapsible");
 
+
+  coll[0].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = document.getElementsByClassName("order-content");
+    console.log(content[0]);
+    if (content[0].style.display === "block") {
+      content[0].style.display = "none";
+    } else {
+      content[0].style.display = "block";
+    }
+  });
 
 
 ///////////// Form Validation/////////////////////
@@ -142,3 +154,8 @@ addselect.addEventListener("click",(e)=>{
     $("#area").append(newselect);
    
 });
+
+
+
+
+

@@ -534,6 +534,89 @@ section:first-child {
     font-size: 18px;
 }
 
+.order-page-title{
+    margin-top: 0;
+}
+
+.order-img{
+    
+    background-color: #f72d57;
+    
+}
+
+.order-item{
+  box-shadow:0 1px 6px 0 rgba(0,0,0,0.5);
+  display: grid;
+  grid-template-columns: 150px 150px  auto;
+  width: 50%;
+  padding: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 15px;
+}
+
+
+
+.order-info-li{
+    color: #707070;
+    font-size: 13px;
+    font-weight: normal;
+    width: 10px;
+}
+
+.order-content{
+    padding: 0;
+  background-color: white;
+  max-height: 10;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: none;
+}
+
+.order-content li{
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    width: 60px;
+}
+
+.order-content ul{
+    padding: 0;
+}
+
+.collapsible{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+}
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+
+    
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+
+  }
+
+
+  table, td, th {  
+    border: 1px solid;
+    text-align: center;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 85%;
+  }
+  
+  th, td {
+    padding: 15px;
+    font-weight: normal;
+  }
+
 @media (max-width: 1199px) {
     .side-pane-content {
         width: 33%;
