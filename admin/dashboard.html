@@ -16,30 +16,47 @@
 <body>
   <div class="container">
 
-      <header>
-          <nav class="top-bar">
-              
-              <div class="navbar-brand">
-                  <h1>Tasbeera</h1>
-              </div>
-              <div class="viewline"></div>
-              <div class="txt">
-                  <div>
-                      <p>Viewing menu for</p>
-                      <p class="txtt"><strong>Sector 26, Gurgaon</strong> </p>
-                  </div>
-              </div>
-             <div class="nav-links">
-                 <a class="nav-link" href="#"><button>Login/Signup</button></a>
-             </div>
-          </nav>
-          <nav class="sec-nav">
-              <a href="#" class="nav-button">
-                  <i class="fas fa-chart-line"></i>
-                  <p> Dashboard</p>
-              </a>         
-          </nav>
-      </header>
+    <header>
+        <nav class="top-bar">
+            <div class="navbar-brand">
+                <a href="home.html">
+                    <h1>Tasbeera</h1>
+                </a>
+            </div>
+            <div class="viewline"></div>
+            <div class="txt">
+                <div>
+                    <p>Viewing menu for</p>
+                    <p class="txtt"><strong>Cairo</strong> </p>
+                </div>
+            </div>
+        <div class="nav-links">
+            <a class="nav-link" href="#"><button for="signin-dialog" class="dialog-toggle">Login/Signup</button></a>
+        </div>
+        </nav>
+        <nav class="sec-nav">
+            <a href="home.html" class="nav-button">
+                <i class="far fa-star"></i>
+                <p>Best Sellers</p>
+            </a>
+            <a href="offers.html" class="nav-button">
+                <i class="fas fa-align-justify"></i>
+                <p>Hot Offers</p>
+            </a>
+            <a href="restaurants.html" class="nav-button">
+                <i class="fas fa-utensils"></i>
+                <p>All Restaurants</p>
+                
+            </a>
+            <button class="nav-button small-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="nav-button small-btn dialog-toggle" for="cart-side-pane">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        
+        </nav>
+    </header>
       
       <nav class="grid grid-9">
           <a href="#" class="nav-button">
@@ -74,7 +91,86 @@
   </div>
   
 
+  <div class="dialog" id="signin-dialog">
+    <div class="dialog-wraper">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h2 class="dialog-title">Login</h2>
+                <button>
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+            <div class="diialog-body">
+                <form class="form" id="form">
+                    <div class="area full-width">
+                        <div class="filled-cover">
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input class="input form-control" id="email" type="email">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>error message</small>    
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">password</label>
+                                <input class="input form-control" id="password" type="password">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>error message</small>
+                            </div>
+                            <div class="form-link">
+                                <a class="form-text"><input type="checkbox"> I accept The <span class="form-a">Terms and Conditions</span> and <span class="form-a">Privacy policy</span> of the website</a>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn-style">Register</button>
+                            </div>
+                            <div class="form-link">
+                                <a class="form-text" href="restaurants/register.html">Registering for a restaurant?</a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="dialog" id="search-dialog">
+    <div class="dialog-wraper">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h2 class="dialog-title">Search</h2>
+                <button>
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+            <div class="diialog-body">
+                <form class="form" id="form">
+                    <div class="area full-width">
+                        <div class="filled-cover">
+                            <div class="form-group">
+                                <label class="form-label">Search</label>
+                                <input class="input form-control" id="email" type="email">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>error message</small>    
+                            </div>
+                            <div class="form-group">
+                                <a href="search_results.html">
+
+                                    <button class="btn-style">Search</button>
+                                </a>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
