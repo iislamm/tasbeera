@@ -2,66 +2,27 @@ $(document).ready(function() {
     $(".dialog-header > button, .side-pane-header > button").click(function() {
         $($(this).parents()[3]).fadeOut({ duration: 100 });
     })
-    
+
     $(".dialog-toggle").click(function() {
         var targetDialogID = $(this).attr("for")
         $(`#${targetDialogID}`).fadeIn({ duration: 100 });
     })
 
-     $('.cart-item .delete').click(function() {
+    $('.cart-item .delete').click(function() {
         $($(this).parents()[1]).fadeOut({ duration: 200 })
-     })
-<<<<<<< HEAD
-     
-     $('.collapsible').click(function() {
-         $(this).toggleClass("active");
-         var content = $(this).parent().next('.order-content')
-         
-         if (content.css('display') === "block") {
-           content.css('display', "none");
-         } else {
-             content.css('display', "block");
-         }
-     })
-=======
-})
-
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function increaseSlides() {
-  showSlides(slideIndex += 1);
-}
-function decreaseSlides() {
-    showSlides(slideIndex -= 1);
-  }
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-setInterval( increaseSlides, 5000);
-
-
-
->>>>>>> 8718a4498d9fd7a69298791aeb66b7a1c06c2ba7
-
-     $('.filter').click(function() {
+    })
+        
+    $('.collapsible').click(function() {
+        $(this).toggleClass("active");
+        var content = $(this).parent().next('.order-content')
+        
+        if (content.css('display') === "block") {
+        content.css('display', "none");
+        } else {
+            content.css('display', "block");
+        }
+    })
+    $('.filter').click(function() {
         filter = $(this).attr('name')
         checked = $(this).is(":checked")
         items = $('.list-item')
@@ -78,44 +39,75 @@ setInterval( increaseSlides, 5000);
                             $(items[i]).show()
                         }
                     }
-
+                    
                 }
                 break;
             case 'rate': 
-                for (var i = 0; i < items.length; i++) {
-                    var rate_element = $(items[i]).find('.rate')[0]
-                    var rate_text = $(rate_element).text()
-                    var rate = Number(rate_text.match(/\d\.\d/)[0])
-                    if (rate < 3) {
-                        if (checked) {
-                            $(items[i]).hide()
-                        } else {
-                            $(items[i]).show()
-                        }
+            for (var i = 0; i < items.length; i++) {
+                var rate_element = $(items[i]).find('.rate')[0]
+                var rate_text = $(rate_element).text()
+                var rate = Number(rate_text.match(/\d\.\d/)[0])
+                if (rate < 3) {
+                    if (checked) {
+                        $(items[i]).hide()
+                    } else {
+                        $(items[i]).show()
                     }
-
                 }
-                break;
+                
+            }
+            break;
             default: // category filter
-                var category = filter
-                for (var i = 0; i < items.length; i++) {
-                    var category_element = $(items[i]).find('.categories')[0]
-                    var category_text = $(category_element).text().toLowerCase()
-                    var category_match = category_text.match(new RegExp(category))
-                    if (!category_match) {
-                        if (checked) {
-                            $(items[i]).hide()
-                        } else {
-                            $(items[i]).show()
-                        }
+            var category = filter
+            for (var i = 0; i < items.length; i++) {
+                var category_element = $(items[i]).find('.categories')[0]
+                var category_text = $(category_element).text().toLowerCase()
+                var category_match = category_text.match(new RegExp(category))
+                if (!category_match) {
+                    if (checked) {
+                        $(items[i]).hide()
+                    } else {
+                        $(items[i]).show()
                     }
-
                 }
-
+                
+            }
         }
-     })
+    })
 })
 
+
+
+    
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function increaseSlides() {
+    showSlides(slideIndex += 1);
+}
+function decreaseSlides() {
+    showSlides(slideIndex -= 1);
+    }
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+setInterval( increaseSlides, 5000);
 
 /************** Form Validation **************/
 const form = document.getElementById('form');
