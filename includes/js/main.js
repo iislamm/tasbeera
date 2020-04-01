@@ -156,7 +156,6 @@ addselect.addEventListener("click",(e)=>{
    
 });
 
-
-
-
-
+function isprice(price) {
+    return /^([0-9])\w+/.test(price);
+}

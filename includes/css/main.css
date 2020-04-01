@@ -583,36 +583,36 @@ section:first-child {
     padding: 0;
 }
 
-.collapsible {
+.order-content .order-content.collapsible {
     float: right;
     margin-right: 20px;
     margin-top: 20px;
     background-color: transparent;
     border: none;
 }
-.collapsible:after {
+.order-content .collapsible:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
-  }
+}
   
-  .active:after {
+.order-content .collapsible.active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
+}
 
 
-  table, td, th {  
+table, td, th {  
     border: 1px solid;
     text-align: center;
-  }
+}
   
-  table {
+table {
     border-collapse: collapse;
     width: 85%;
-  }
+}
   
-  th, td {
+th, td {
     padding: 15px;
     font-weight: normal;
-  }
+}
 
 @media (max-width: 1199px) {
     .side-pane-content {
@@ -853,4 +853,26 @@ classes that adds makes the signup text position in the center and adds some sty
 .align-button{
     text-align: right;
     padding: 0 25px;
+}
+
+.grid-9 {
+    grid-template-columns: repeat(9, 1fr); 
+}
+
+.addbutton {
+    font-family:"Poppins", sans-serif;;
+    font-weight: 500;
+    font-size: medium;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #f72d57;
+    border: none;
+    border-radius:6px ;
+    cursor: pointer;
+    margin-top:30px ;
+}
+
+.nav-button .num {
+    color: red
 }
