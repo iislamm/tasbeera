@@ -4,6 +4,13 @@ require_once 'app/models/Restaurant.php';
 require_once 'app/models/Order.php';
 
 class RestaurantController extends Controller {
+
+	/**
+	 * @param array $id
+	 * get a restaurant from the database with the parameter id
+	 * creates restaurant view for the user to show a restaurant
+	 * OR creates dashboard view for a restaurant
+	 */
 	public function index($id = []) {
 		if (isset($_SESSION['user_type'])) {
 			if ($_SESSION['user_type'] == 'user') {
@@ -22,6 +29,10 @@ class RestaurantController extends Controller {
 		}
 	}
 
+	/**
+	 * get all restaurants from the database
+	 * create restaurants view for the user
+	 */
 	public function all() { // TODO Add user condition
 		$restaurantVM = $this->model('RestaurantsViewModel');
 		$restaurants = Restaurant::getAll();
@@ -33,6 +44,9 @@ class RestaurantController extends Controller {
 		$this->view('restaurant/all', $restaurantVM);
 	}
 
+	/**
+	 * create new restaurant account and saves it to the database
+	 */
 	public function create() {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['submit']) {
 			$data = [];
@@ -48,6 +62,9 @@ class RestaurantController extends Controller {
 		}
 	}
 
+	/**
+	 * create restaurant view
+	 */
 	public function register() {
 		$this->view('restaurant/register');
 	}

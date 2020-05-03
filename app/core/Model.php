@@ -2,6 +2,12 @@
 
 
 class Model {
+
+	/**
+	 * @param $id
+	 * @return mixed
+	 * returns object with specific id
+	 */
 	public static function getWithId($id) {
 		global $conn;
 		$class_name = get_called_class();
@@ -16,6 +22,7 @@ class Model {
 
 	/**
 	 * @return array
+	 * returns all objects
 	 */
 	public static function getAll() {
 		global $conn;

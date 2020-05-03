@@ -4,6 +4,10 @@ require_once 'app/models/Restaurant.php';
 
 class HomeController extends Controller {
 
+	/**
+	 * @param string $name
+	 * creates restaurant view or user view
+	 */
 	public function index($name = '') {
 		if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'restaurant') {
 			exit(header('Location: /tasbeera/restaurant'));

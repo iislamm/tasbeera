@@ -28,6 +28,9 @@ class Restaurant extends Model {
 		$this->getItemsFromDB();
 	}
 
+	/**
+	 * get restaurant data fro the database
+	 */
 	private function getItemsFromDB() {
 		global $conn;
 

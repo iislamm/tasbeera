@@ -3,12 +3,22 @@
 
 class AuthService {
 
+	/**
+	 * user logout from the system
+	 * delete session data
+	 * navigate to the home page
+	 */
 	public static function logout() {
 		session_destroy();
 		session_reset();
 		exit(header('Location: /tasbeera'));
 	}
 
+	/**
+	 * @param $user_data
+	 * authenticate the user and sign in
+	 * get the user data from the database
+	 */
 	public static function user_signin($user_data) {
 		if (AuthService::validateData($user_data)) {
 			global $conn;
@@ -28,6 +38,11 @@ class AuthService {
 		}
 	}
 
+	/**
+	 * @param $data
+	 * authenticate the restaurant and sign in
+	 * get the restaurant data from the database
+	 */
 	public static function restaurant_signin($data) {
 		print_r($data);
 		if (AuthService::validateData($data)) {
@@ -48,6 +63,12 @@ class AuthService {
 		}
 	}
 
+	/**
+	 * @param $user_data
+	 * validate user's data
+	 * add new user to the database
+	 * user sign in
+	 */
 	public static function createUser($user_data) {
 		if (AuthService::validateData($user_data, 'user', true)) {
 			global $conn;
@@ -62,6 +83,12 @@ class AuthService {
 		}
 	}
 
+	/**
+	 * @param $data
+	 * validate restaurant's data
+	 * add new restaurant to the database
+	 * restaurant sign in
+	 */
 	public static function createRestaurantAccount($data) {
 		if (AuthService::validateData($data, 'restaurant', true)) {
 			global $conn;
@@ -75,6 +102,15 @@ class AuthService {
 	}
 
 
+	/**
+	 * @param $data
+	 * @param string $type
+	 * @param array $is_new
+	 * @return bool
+	 * checks whether the email and password are typed correctly
+	 * checks whether the email exists or not
+	 * returns false if any error occurred false otherwise
+	 */
 	private static function validateData($data, $type = 'user', $is_new = []) {
 		if (!(isset($data['email']) && isset($data['password']))) {
 //			echo "reached here";
@@ -101,6 +137,11 @@ class AuthService {
 		return true;
 	}
 
+	/**
+	 * @param $email
+	 * @return bool
+	 * validates the email using regex expression
+	 */
 	private static function isEmail($email) {
 		if (preg_match("/^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $email)) {
 			return true;
@@ -108,6 +149,11 @@ class AuthService {
 		return false;
 	}
 
+	/**
+	 * @param $password
+	 * @return bool
+	 * validates the password using regex expression
+	 */
 	private static function isPassword($password) {
 		if (preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/", $password)) {
 			return true;
@@ -115,6 +161,10 @@ class AuthService {
 		return false;
 	}
 
+	/**
+	 * @return mixed
+	 * creates new cart and saves it to the database
+	 */
 	private static function createCart() {
 		global $conn;
 
