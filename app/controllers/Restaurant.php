@@ -1,6 +1,7 @@
 <?php
-require_once 'app/models/Restaurant.php';
 require_once 'app/services/AuthService.php';
+require_once 'app/models/Restaurant.php';
+require_once 'app/models/Order.php';
 
 class RestaurantController extends Controller {
 	public function index($id = []) {
@@ -11,8 +12,12 @@ class RestaurantController extends Controller {
 					$this->view('restaurant/index', $restaurant);
 				}
 			} elseif ($_SESSION['user_type'] == 'restaurant') {
-				$restaurant = $this->model('Restaurant', $_SESSION['restaurant_id']);
-				$this->view('/restaurant/dashboard');
+				$restaurantVM = $this->model('RestaurantDashboardVM');
+				$restaurant = Restaurant::getWithId($_SESSION['restaurant_id']);
+				$restaurantVM->restaurant = $restaurant;
+				$restaurantVM->rate = $restaurant->rate;
+				$restaurantVM->orders_count = Order::getOrdersCount($restaurant->id);
+				$this->view('/restaurant/dashboard', $restaurantVM);
 			}
 		}
 	}
@@ -45,5 +50,26 @@ class RestaurantController extends Controller {
 
 	public function register() {
 		$this->view('restaurant/register');
+	}
+
+	public function signin() {
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+			AuthService::restaurant_signin(['email' => $_POST['email'], 'password' => $_POST['password']]);
+		}
+		$this->view('restaurant/signin');
+	}
+
+	public function addItem() {
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+			$item = new Item();
+			$item->title = $_POST['title'];
+			$item->description = $_POST['description'];
+			$item->price = $_POST['price'];
+			$item->type = $_POST['type'];
+			$item->restaurantId = $_SESSION['restaurant_id'];
+			exit(header('Location: /tasbeera/restaurant'));
+		} else {
+			$this->view('restaurant/addItem');
+		}
 	}
 }

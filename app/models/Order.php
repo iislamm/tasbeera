@@ -20,4 +20,11 @@ class Order extends Model {
 			$conn->query($sql);
 		}
 	}
+
+	public static function getOrdersCount($restaurant_id) {
+		global $conn;
+		$sql = "SELECT * FROM orderr WHERE restaurantId=" . $restaurant_id;
+		$result = $conn->query($sql);
+		return $result->num_rows;
+	}
 }

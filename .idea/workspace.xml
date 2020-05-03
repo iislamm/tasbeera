@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ed060cd-d628-488e-8faf-36fc23ecbc24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/cart/checkout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cart/confirm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/restaurant/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/restaurant/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/RestaurantDashboardVM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/restaurant/addItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/restaurant/signin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tasbeera.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Restaurant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Item.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/AuthService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/AuthService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cart/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cart/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/restaurant/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/js/cart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/templates/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +68,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
@@ -87,6 +79,8 @@
       <recent name="C:\wamp64\www\Tasbeera\app\User" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Tasbeera\data" />
+      <recent name="C:\wamp64\www\Tasbeera\app\views\restaurant" />
       <recent name="C:\wamp64\www\Tasbeera\includes" />
     </key>
   </component>
@@ -100,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588392864110</updated>
-      <workItem from="1588392869788" duration="66127000" />
+      <workItem from="1588392869788" duration="70970000" />
     </task>
     <servers />
   </component>
@@ -116,16 +110,16 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="500" y="185" key="FileChooserDialogImpl/-1366.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1588539276635" />
-    <state x="532" y="233" key="NewPhpClassDialog" timestamp="1588505543679">
+    <state x="532" y="233" key="NewPhpClassDialog" timestamp="1588542900190">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="532" y="233" key="NewPhpClassDialog/-1366.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1588505543679" />
+    <state x="532" y="233" key="NewPhpClassDialog/-1366.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1588542900190" />
     <state x="532" y="244" key="NewPhpClassDialog/-1366.0.1366.728/0.0.1440.900@0.0.1440.900" timestamp="1588435836911" />
     <state x="505" y="197" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1588440710297" />
-    <state x="554" y="353" key="NewPhpFileDialog" timestamp="1588539516409">
+    <state x="554" y="353" key="NewPhpFileDialog" timestamp="1588544662667">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="554" y="353" key="NewPhpFileDialog/-1366.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1588539516409" />
+    <state x="554" y="353" key="NewPhpFileDialog/-1366.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1588544662667" />
     <state x="554" y="369" key="NewPhpFileDialog/-1366.0.1366.728/0.0.1440.900@0.0.1440.900" timestamp="1588433509999" />
     <state x="526" y="298" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1588440780327" />
     <state x="221" y="72" key="SettingsEditor" timestamp="1588463202260">

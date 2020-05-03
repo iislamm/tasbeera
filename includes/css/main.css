@@ -246,7 +246,7 @@ header {
     text-align: center;
     border: 1px black;
     padding: 16px 0;
-    grid-column: span 3;
+    grid-column: span 5;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -1107,4 +1107,32 @@ classes that adds makes the signup text position in the center and adds some sty
     .prev, .next, .text {
         font-size: 11px
     }
+}
+
+.dashborad-content-inner{
+    box-shadow: 0 2px 15px 5px rgba(0,0,0,.2);
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    margin: 10px;
+    padding: 10px 0;
+}
+.dashborad-link{
+    box-shadow: 0 2px 15px 5px rgba(0,0,0,.2);
+    transition: all 0.3s;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    margin: 10px;
+    padding: 10px 0;
+    color: #333333;
+    text-decoration: none;
+}
+.dashborad-link h3{
+    font-weight: 500;
+}
+.dashborad-link:hover{
+    background: #f72d57;
+    color: #ffffff;
 }

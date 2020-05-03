@@ -29,6 +29,7 @@ class AuthService {
 	}
 
 	public static function restaurant_signin($data) {
+		print_r($data);
 		if (AuthService::validateData($data)) {
 			global $conn;
 			$sql = "SELECT * FROM restaurant WHERE email='" . $data['email'] . "' AND password='" . md5($data['password']) . "'";
@@ -39,8 +40,9 @@ class AuthService {
 				$_SESSION['restaurant_name'] = $record['name'];
 				$_SESSION['restaurant_email'] = $record['email'];
 				$_SESSION['user_type'] = 'restaurant';
-//				exit(header('Location: /tasbeera/restaurant'));
-				echo "reached here";
+				exit(header('Location: /tasbeera/restaurant'));
+//				echo "reached here";
+			} else {
 			}
 			echo $conn->error;
 		}
@@ -75,10 +77,11 @@ class AuthService {
 
 	private static function validateData($data, $type = 'user', $is_new = []) {
 		if (!(isset($data['email']) && isset($data['password']))) {
+//			echo "reached here";
 			return false;
 		}
 
-		if (AuthService::isEmail($data['email']) && AuthService::isPassword($data['password'])) {
+		if (!(AuthService::isEmail($data['email']))) {
 			return false;
 		}
 

@@ -39,10 +39,7 @@ if (isset($components[3])) {
             </div>
             <div class="viewline"></div>
             <div class="txt">
-                <div>
-                    <p>Viewing menu for</p>
-                    <p class="txtt"><strong>Cairo</strong></p>
-                </div>
+
             </div>
             <div class="nav-links">
 				<?php
@@ -67,19 +64,14 @@ if (isset($components[3])) {
                 <i class="far fa-star"></i>
                 <p>Best Sellers</p>
             </a>
-            <a href="/tasbeera/offers" class="nav-button <?= $current_nav_link == 'offers' ? 'active' : '' ?>">
-                <i class="fas fa-align-justify"></i>
-                <p>Hot Offers</p>
-            </a>
+
             <a href="/tasbeera/restaurant/all"
                class="nav-button <?= $current_nav_link == 'all_restaurants' ? 'active' : '' ?>">
                 <i class="fas fa-utensils"></i>
                 <p>All Restaurants</p>
 
             </a>
-            <button class="nav-button small-btn dialog-toggle" for="search-dialog">
-                <i class="fas fa-search"></i>
-            </button>
+
             <a class="nav-button small-btn" href="/tasbeera/cart">
                 <i class="fas fa-shopping-cart"></i>
             </a>
