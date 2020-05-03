@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ed060cd-d628-488e-8faf-36fc23ecbc24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/cart/checkout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/cart/confirm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/restaurant/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/restaurant/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Restaurant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Restaurant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/AuthService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/AuthService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cart/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cart/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/js/cart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/templates/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/FileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/FileService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -69,16 +62,16 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -101,11 +94,12 @@
       <option name="presentableId" value="Default" />
       <updated>1588392864110</updated>
       <workItem from="1588392869788" duration="66127000" />
+      <workItem from="1588541769261" duration="1737000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588441647757">
@@ -128,10 +122,11 @@
     <state x="554" y="353" key="NewPhpFileDialog/-1366.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1588539516409" />
     <state x="554" y="369" key="NewPhpFileDialog/-1366.0.1366.728/0.0.1440.900@0.0.1440.900" timestamp="1588433509999" />
     <state x="526" y="298" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1588440780327" />
-    <state x="221" y="72" key="SettingsEditor" timestamp="1588463202260">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="221" y="91" key="SettingsEditor" timestamp="1588541791044">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="221" y="72" key="SettingsEditor/-1366.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1588463202260" />
+    <state x="221" y="91" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1588541791044" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1588457081812">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

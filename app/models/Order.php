@@ -9,6 +9,10 @@ class Order extends Model {
 	public $restaurantId;
 	public $items;
 
+	/**
+	 * @param $order
+	 * add order data to the database
+	 */
 	public static function addToDB($order) {
 		global $conn;
 		$sql = "INSERT INTO orderr (userId, totalCost, address, restaurantId) VALUES (" . $order->userId . ", " . $order->totalCost . ", '" . $order->address . "', " . $order->restaurantId . ")";

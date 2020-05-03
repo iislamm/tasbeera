@@ -5,6 +5,9 @@ require_once 'app/models/Order.php';
 
 class CartController extends Controller {
 
+	/**
+	 * creates cart model and view
+	 */
 	public function index() {
 		if (isset($_SESSION['cartId'])) {
 			$cart = $this->model('Cart', $_SESSION['cartId']);
@@ -13,11 +16,17 @@ class CartController extends Controller {
 		}
 	}
 
+	/**
+	 * creates checkout view
+	 */
 	public function checkout() {
 		$cart = $this->model('Cart', $_SESSION['cartId']);
 		$this->view('cart/checkout', $cart);
 	}
 
+	/**
+	 * user checkout, add a new order to the database and create order view
+	 */
 	public function confirm() {
 		$cart = Cart::getWithId($_SESSION['cartId']);
 		if ($cart->items) {

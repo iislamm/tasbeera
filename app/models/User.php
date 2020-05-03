@@ -22,6 +22,9 @@ class User extends Model {
 		}
 	}
 
+	/**
+	 * give the user an empty cart
+	 */
 	private function setCartFromDB() {
 		global $conn;
 		$sql = 'SELECT * FROM cart WHERE id=' . $this->cartId;

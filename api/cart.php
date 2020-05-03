@@ -1,6 +1,10 @@
 <?php
 require_once 'init.php';
 
+
+/**
+ * get the cart data from the database
+ */
 function getCart() {
 	global $conn;
 	$sql = "SELECT * FROM cart WHERE id = " . $_SESSION['cartId'];
@@ -27,6 +31,12 @@ function getCart() {
 	return $cart;
 }
 
+
+/**
+ * get an item from the database
+ * @param $id
+ * @return array|null
+ */
 function getItem($id) {
 	global $conn;
 	$sql = 'SELECT * FROM item WHERE id=' . $id;

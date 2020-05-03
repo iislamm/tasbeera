@@ -13,6 +13,9 @@ class Cart extends Model {
 		$this->getItemsFromDB();
 	}
 
+	/**
+	 * get cart's items data from the database
+	 */
 	private function getItemsFromDB() {
 		global $conn;
 		$sql = 'SELECT * FROM cartitems WHERE cartId=' . $this->id;
@@ -34,6 +37,9 @@ class Cart extends Model {
 		$this->items = $rows;
 	}
 
+	/**
+	 * remove all items from the cart in the database
+	 */
 	public function clearCart() {
 		global $conn;
 		$sql = "DELETE FROM cartitems WHERE cartId = " . $this->id;

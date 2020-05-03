@@ -28,6 +28,10 @@ class App {
 		call_user_func_array([$this->controller, $this->method], $this->params);
 	}
 
+	/**
+	 * @return false|string[]
+	 * return the controller, method and parameters as array of strings
+	 */
 	private function parseUrl() {
 		if (isset($_GET['url'])) {
 			$url = $_GET['url'];
