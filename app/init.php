@@ -1,4 +1,6 @@
 <?php
+ob_Start();
+session_start();
 
 $current_nav_link = [];
 

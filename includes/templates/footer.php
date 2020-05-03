@@ -28,3 +28,4 @@
 
 <?php
 $conn->close();
+ob_end_flush();;

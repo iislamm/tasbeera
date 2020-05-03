@@ -9,13 +9,15 @@ class User extends Model {
 	public $cartId;
 	public $city;
 
-	public function __construct($data) {
-		$this->name = $data['name'];
-		$this->id = $data['id'];
-		$this->email = $data['email'];
-		$this->cartId = $data['cartId'];
-		$this->city = $data['city'];
-		$this->setCartFromDB();
+	public function __construct($data = []) {
+		if ($data) {
+			$this->name = $data['name'];
+			$this->id = $data['id'];
+			$this->email = $data['email'];
+			$this->cartId = $data['cartId'];
+			$this->city = $data['city'];
+			$this->setCartFromDB();
+		}
 	}
 
 	private function setCartFromDB() {

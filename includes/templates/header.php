@@ -43,9 +43,21 @@ if ($components[2] == 'restaurant' && $components[3] == 'all') {
                 </div>
             </div>
             <div class="nav-links">
-                <a class="nav-link" href="#">
-                    <button for="signin-dialog" class="dialog-toggle">Login/Signup</button>
-                </a>
+				<?php
+				if (isset($_SESSION['user_name'])) {
+					?>
+                    <a class="nav-link" href="/tasbeera/user/logout" >
+                        <button>Logout</button>
+                    </a>
+					<?php
+				} else {
+					?>
+                    <a class="nav-link" href="/tasbeera/user/signin">
+                        <button>Login</button>
+                    </a>
+					<?php
+				}
+				?>
             </div>
         </nav>
         <nav class="sec-nav">

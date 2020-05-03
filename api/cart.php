@@ -2,7 +2,8 @@
 require_once 'init.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-	$sql = "SELECT * FROM cart WHERE id = 1";
+	print_r($_SESSION);
+	$sql = "SELECT * FROM cart WHERE id = " . $_SESSION['cartId'];
 	$query_result = $conn->query($sql);
 	$cart = $row = $query_result->fetch_assoc();
 
@@ -30,20 +31,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$data = json_decode(file_get_contents('php://input'), true);
 	$item_id = $data['id'];
-	$sql = 'INSERT INTO cartitems (itemId, cartId) VALUES (' . $item_id . ', 1)';
+	$sql = 'INSERT INTO cartitems (itemId, cartId) VALUES (' . $item_id . ', ' . $_SESSION['cartId'] . ')';
 	$result = $conn->query($sql);
 	echo $result;
 	if ($conn->error) {
 		die($conn->error);
 	}
 	echo $result;
+	echo $_SESSION['cartId'];
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
 	$data = json_decode(file_get_contents('php://input'), true);
 	$item_id = $_GET['id'];
 	$quantity = $data['quantity'];
-	$sql = 'UPDATE cartitems SET quantity=' . $quantity . ' WHERE itemId=' . $item_id . ' AND cartId = 1';
+	$sql = 'UPDATE cartitems SET quantity=' . $quantity . ' WHERE itemId=' . $item_id . ' AND cartId = ' . $_SESSION['cartId'];
 	$result = $conn->query($sql);
 	echo $result;
 	if ($conn->error) {
@@ -54,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
 
 if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
 	$item_id = $_GET['id'];
-	$sql = 'DELETE FROM cartitems WHERE itemId=' . $item_id;
+	$sql = 'DELETE FROM cartitems WHERE itemId=' . $item_id . ' AND cartId=' . $_SESSION['cartId'];
 	$result = $conn->query($sql);
 	if ($conn->error) {
 		die($conn->error);
