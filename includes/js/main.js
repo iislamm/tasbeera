@@ -78,18 +78,26 @@ $(document).ready(function () {
     })
 })
 
-function addItem(e, id) {
-    const xhttp = new XMLHttpRequest();
-    xhttp.open('POST', '/tasbeera/api/cart.php', true);
-    const data = {
-        'id': id
+function addItem(e, id, restaurantId) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.open('GET', '/tasbeera/api/cart.php', false);
+    xhttp.send();
+    let res = JSON.parse(xhttp.response);
+    if (!res.items.length || Number(res.items[0].restaurantId) === restaurantId) {
+        xhttp = new XMLHttpRequest();
+        xhttp.open('POST', '/tasbeera/api/cart.php', true);
+        const data = {
+            'id': id
+        }
+        xhttp.setRequestHeader('Content-Type', 'application/json');
+        xhttp.send(JSON.stringify(data));
+        res = xhttp.response;
+        console.log(res);
+        $(e).attr('disabled', 'true');
+        $(e).text("Added to cart")
+    } else {
+        alert("You cannot order different restaurants");
     }
-    xhttp.setRequestHeader('Content-Type', 'application/json');
-    xhttp.send(JSON.stringify(data));
-    const res = xhttp.response;
-    console.log(res);
-    $(e).attr('disabled', 'true');
-    $(e).text("Added to cart")
 }
 
 function removeItem(e, id) {
@@ -107,9 +115,9 @@ function calculateTotalCost() {
     for (let i = 0; i < items.length; i++) {
         let price = Number($(items[i]).find('.item-price').text().substr(3));
         let quantity = Number($(items[i]).find('.item-actions select').val());
-        totalPrice = price * quantity;
+        totalPrice += quantity ? price * quantity : price;
     }
-    $('#cart .section-description').text(`Total price: EGP ${totalPrice}`);
+    $('#cart .total-price').text(`Total price: EGP ${totalPrice}`);
 }
 
 function handleQuantityChange(e, id) {

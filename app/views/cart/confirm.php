@@ -1,0 +1,1 @@
+<h1 class="text-center">Your order is confirmed and will arrive in 50 minutes</h1>

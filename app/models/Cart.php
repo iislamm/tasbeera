@@ -33,4 +33,11 @@ class Cart extends Model {
 		}
 		$this->items = $rows;
 	}
+
+	public function clearCart() {
+		global $conn;
+		$sql = "DELETE FROM cartitems WHERE cartId = " . $this->id;
+		$conn->query($sql);
+		$this->items = [];
+	}
 }

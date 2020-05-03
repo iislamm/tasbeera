@@ -4,10 +4,12 @@ $path = parse_url($directoryURI, PHP_URL_PATH);
 $components = explode('/', $path);
 $first_part = $components[2];
 
-if ($components[2] == 'restaurant' && $components[3] == 'all') {
-	$current_nav_link = 'all_restaurants';
-} elseif ($components[2] == 'home' || !strlen($components[2])) {
-	$current_nav_link = 'best_seller';
+if (isset($components[3])) {
+    if ($components[2] == 'restaurant' && $components[3] == 'all') {
+        $current_nav_link = 'all_restaurants';
+    } elseif ($components[2] == 'home' || !strlen($components[2])) {
+        $current_nav_link = 'best_seller';
+    }
 }
 ?>
 
@@ -44,7 +46,7 @@ if ($components[2] == 'restaurant' && $components[3] == 'all') {
             </div>
             <div class="nav-links">
 				<?php
-				if (isset($_SESSION['user_name'])) {
+				if (isset($_SESSION['user_type'])) {
 					?>
                     <a class="nav-link" href="/tasbeera/user/logout" >
                         <button>Logout</button>

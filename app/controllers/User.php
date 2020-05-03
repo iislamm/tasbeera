@@ -26,7 +26,7 @@ class UserController extends Controller {
 			$user_data = [];
 			$user_data['email'] = $_POST['email'];
 			$user_data['password'] = $_POST['password'];
-			AuthService::signin($user_data);
+			AuthService::user_signin($user_data);
 		}
 
 		$user = $this->model('User');

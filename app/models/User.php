@@ -8,6 +8,7 @@ class User extends Model {
 	public $cart;
 	public $cartId;
 	public $city;
+	public $address;
 
 	public function __construct($data = []) {
 		if ($data) {
@@ -16,6 +17,7 @@ class User extends Model {
 			$this->email = $data['email'];
 			$this->cartId = $data['cartId'];
 			$this->city = $data['city'];
+			$this->address = $data['address'];
 			$this->setCartFromDB();
 		}
 	}

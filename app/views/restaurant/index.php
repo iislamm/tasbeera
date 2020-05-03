@@ -54,7 +54,7 @@ $types = array_keys($groupedItems);
                                 </div>
                                 <div class="card-footer">
                                     <div class="price">EGP <?= $item->price ?></div>
-                                    <button onclick="addItem(this, <?= $item->id ?>)">add to cart</button>
+                                    <button onclick="addItem(this, <?= $item->id ?>, <?= $item->restaurantId ?>)">add to cart</button>
                                 </div>
                             </div>
                         </div>

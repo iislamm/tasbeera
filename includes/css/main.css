@@ -16,6 +16,10 @@ button[disabled] {
     background-color: #777777 !important;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /*
     A class to wrap the elements and keep distance from the edges of the display for clearner display
 */
@@ -66,43 +70,43 @@ button[disabled] {
 
 
 .grid-3 {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-4 {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .grid-5 {
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .grid-6 {
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .grid-7 {
-    grid-template-columns: repeat(7, 1fr); 
+    grid-template-columns: repeat(7, 1fr);
 }
 
 .grid-8 {
-    grid-template-columns: repeat(8, 1fr); 
+    grid-template-columns: repeat(8, 1fr);
 }
 
 .grid-9 {
-    grid-template-columns: repeat(9, 1fr); 
+    grid-template-columns: repeat(9, 1fr);
 }
 
 .grid-10 {
-    grid-template-columns: repeat(10, 1fr); 
+    grid-template-columns: repeat(10, 1fr);
 }
 
 .grid-11 {
-    grid-template-columns: repeat(11, 1fr); 
+    grid-template-columns: repeat(11, 1fr);
 }
 
 .grid-12 {
-    grid-template-columns: repeat(12, 1fr); 
+    grid-template-columns: repeat(12, 1fr);
 }
 
 
@@ -144,7 +148,6 @@ button[disabled] {
 .col-8 {
     grid-column: span 8; /* USE ONLY IF PARENT GRID COLUMNS >= 6 */
 }
-
 
 
 /***************** Navbar and footer ********************/
@@ -191,14 +194,15 @@ header {
 .logo {
     cursor: pointer;
 }
+
 .nav-links {
     list-style: none;
 
 }
 
 .top-bar .txt {
-    color:black;
-    font-family: "Poppins",sans-serif;
+    color: black;
+    font-family: "Poppins", sans-serif;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -215,7 +219,7 @@ header {
 }
 
 .nav-link button {
-    font-family:"Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;;
     font-weight: 500;
     font-size: medium;
     color: white;
@@ -223,13 +227,13 @@ header {
     padding: 12px 25px;
     background-color: #f72d57;
     border: none;
-    border-radius:6px ;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 .sec-nav {
     cursor: pointer;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
 }
@@ -240,7 +244,7 @@ header {
     letter-spacing: .27px;
     box-sizing: border-box;
     text-align: center;
-    border: 1px  black;
+    border: 1px black;
     padding: 16px 0;
     grid-column: span 3;
     text-decoration: none;
@@ -251,6 +255,7 @@ header {
 .nav-button i {
     font-size: 36px;
 }
+
 .nav-button > * {
     display: inline-block;
     text-align: center;
@@ -284,7 +289,7 @@ footer .social-menu ol li {
     padding: 20px;
     list-style: none;
     display: inline-block;
-    font-family:"Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     cursor: pointer;
 
 }
@@ -306,6 +311,7 @@ footer .social-menu ul li {
     list-style: none;
     display: inline-block;
 }
+
 footer .social-menu ul li i {
     color: #ffffff;
     font-size: 25px;
@@ -318,7 +324,7 @@ footer .social-menu ul li a {
     border-radius: 50%;
     text-align: center;
     transition: 0.5s;
-    transform: translate(0,0px);
+    transform: translate(0, 0px);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -355,7 +361,7 @@ footer .social-menu ul li:nth-child(5) a:hover i {
 }
 
 .footer-part2 p {
-    font-family:"Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;;
     padding-top: 20px;
     text-align: center;
     margin: 0
@@ -369,12 +375,12 @@ footer .social-menu ul li:nth-child(5) a:hover i {
 }
 
 .card {
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,.16);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16);
     transition: all 0.3s;
 }
 
 .card:hover {
-    box-shadow: 0 2px 15px 5px rgba(0,0,0,.2);
+    box-shadow: 0 2px 15px 5px rgba(0, 0, 0, .2);
 }
 
 .card-media {
@@ -453,6 +459,10 @@ section:first-child {
     margin-bottom: 40px;
 }
 
+.section-footer {
+    text-align: center;
+}
+
 .section-title {
     font-size: 32px;
     font-weight: 700;
@@ -473,7 +483,7 @@ section:first-child {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: none;
 }
 
@@ -594,21 +604,20 @@ section:first-child {
 }
 
 .order-img {
-    
+
     background-color: #f72d57;
-    
+
 }
 
 .order-item {
-  box-shadow:0 1px 6px 0 rgba(0,0,0,0.5);
-  display: grid;
-  grid-template-columns: 150px 150px  auto;
-  width: 50%;
-  padding: 10px;
-  grid-row-gap: 10px;
-  margin-bottom: 15px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 150px 150px auto;
+    width: 50%;
+    padding: 10px;
+    grid-row-gap: 10px;
+    margin-bottom: 15px;
 }
-
 
 
 .order-info-li {
@@ -645,25 +654,26 @@ section:first-child {
     background-color: transparent;
     border: none;
 }
+
 .order-item .collapsible:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
 }
-  
+
 .order-content .collapsible.active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 
-table, td, th {  
+table, td, th {
     border: 1px solid;
     text-align: center;
 }
-  
+
 table {
     border-collapse: collapse;
     width: 85%;
 }
-  
+
 th, td {
     padding: 15px;
     font-weight: normal;
@@ -687,7 +697,7 @@ th, td {
     }
 }
 
-.rich-list .list-item  {
+.rich-list .list-item {
     max-height: 180px;
     box-shadow: 0 0 4px #b5b5b5;
     padding: 18px 25px;
@@ -742,6 +752,7 @@ ul {
     list-style-type: none;
     margin: 0;
 }
+
 .sidebar-box-shadow {
     padding: 25px;
 }
@@ -760,6 +771,7 @@ ul {
     color: #333333;
     font-weight: 400;
 }
+
 /*
 some styling to the li that makes it verticale and other things like font weight and width
 */
@@ -769,6 +781,7 @@ some styling to the li that makes it verticale and other things like font weight
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 /*
 class that that makes shadow box to the side list and modify the width and height
 */
@@ -778,7 +791,7 @@ aside {
 }
 
 .sidebar-box-shadow {
-    box-shadow:0 1px 6px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 5%
 }
@@ -789,34 +802,25 @@ aside {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-.form{
+.form {
     display: block;
 }
+
 /*
 class that adds style to the login label
 */
-.form-label{
+.form-label {
     font-size: 16px;
     font-weight: 500;
     line-height: normal;
     color: #707070;
     margin-bottom: 2px;
 }
+
 /*
 class that adds style to the the input field
 */
-.form-control{
+.form-control {
     display: block;
     width: 100%;
     padding: .375rem .75rem;
@@ -825,10 +829,11 @@ class that adds style to the the input field
     background-color: #fff;
     background-clip: padding-box;
 }
+
 /*
 class that adds extra styles to the the input field
 */
-.input{
+.input {
     width: 100%;
     box-shadow: inset 0 0 0 30px #fff;
     border: none;
@@ -841,6 +846,7 @@ class that adds extra styles to the the input field
     padding: 0;
     font-size: 17px;
 }
+
 /*
 class that adds width, margin and padding to the form
 */
@@ -852,18 +858,20 @@ class that adds width, margin and padding to the form
 .area.full-width {
     width: 100%;
 }
+
 /*
 class that adds width, margin and padding to the inner area of the form
 */
-.filled-cover{
+.filled-cover {
     width: 90%;
     margin: 0 auto;
     padding-top: 0;
 }
+
 /*
 class that adds margin between every form group
 */
-.form-group{
+.form-group {
     margin-bottom: 15px;
     position: relative;
     padding-bottom: 20px;
@@ -872,74 +880,87 @@ class that adds margin between every form group
 /*
 class that adds styles to the forget password text
 */
-.form-forget-pass{
+.form-forget-pass {
     color: #f72d57;
     max-width: 100%;
     margin-top: -5px;
     text-align: right;
     margin-bottom: 30px;
 }
+
 /*
 classes that adds makes the signup text position in the center and adds some style to the anchor and the text
 */
-.form-link{
+.form-link {
     padding: 15px 0;
 }
-.form-text{
+
+.form-text {
     font-size: 14px;
     text-decoration: none;
 }
-.form-a{
+
+.form-a {
     font-weight: 600;
     color: #f72d57;
 }
-.visited{
-    color:#f72d57;
+
+.visited {
+    color: #f72d57;
 }
-.custom-select{
+
+.custom-select {
     background-color: white;
-    box-shadow: 0 8px 15px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.5);
     width: 25%;
     padding: 10px 0;
     margin: 0 10px;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 4px;
     color: gray;
-    font-family:  'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-.dropdown-align{
+
+.dropdown-align {
     margin: 10px 0;
 }
-.form-group i{
+
+.form-group i {
     position: absolute;
     top: 30px;
     right: -2px;
     visibility: hidden;
 }
-.form-group small{
+
+.form-group small {
     position: absolute;
     visibility: hidden;
 }
-.form-group.success input{
-    border-color:#2ecc71;
+
+.form-group.success input {
+    border-color: #2ecc71;
 }
-.form-group.error input{
-    border-color:#e74c3c;
+
+.form-group.error input {
+    border-color: #e74c3c;
 }
-.form-group.success i.fa-check-circle{
+
+.form-group.success i.fa-check-circle {
     visibility: visible;
     color: #2ecc71;
 }
-.form-group.error i.fa-exclamation-circle{
+
+.form-group.error i.fa-exclamation-circle {
     visibility: visible;
-    color:#e74c3c;
+    color: #e74c3c;
 }
 
-.form-group.error small{
+.form-group.error small {
     visibility: visible;
-    color:#e74c3c;
+    color: #e74c3c;
 }
-#addSelect{
+
+#addSelect {
     position: sticky;
     color: gray;
     visibility: visible;
@@ -948,27 +969,31 @@ classes that adds makes the signup text position in the center and adds some sty
     padding: 10px 0;
 }
 
-#addSelect:hover{color:black;}
+#addSelect:hover {
+    color: black;
+}
 
- .btn-style {
+.btn-style {
     border: none;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: .34px;
     color: #fff;
     border-radius: 4px;
-    background-color:  #f72d57;
+    background-color: #f72d57;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
-.align-button{
+
+.align-button {
     text-align: right;
     padding: 0 25px;
 }
 
 .addbutton {
-    font-family:"Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;;
     font-weight: 500;
     font-size: medium;
     color: white;
@@ -976,9 +1001,9 @@ classes that adds makes the signup text position in the center and adds some sty
     padding: 12px 25px;
     background-color: #f72d57;
     border: none;
-    border-radius:6px ;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top:30px ;
+    margin-top: 30px;
 }
 
 .nav-button .num {
@@ -990,14 +1015,20 @@ classes that adds makes the signup text position in the center and adds some sty
     max-width: 100%;
     position: relative;
     margin: auto;
-  }
-  .mySlides{
-      margin-bottom: 10px;
-  }
+}
 
-  .slideshow-container img {vertical-align: middle; height: 300px; width: 100%}
-  /* Next & previous buttons */
-  .prev, .next {
+.mySlides {
+    margin-bottom: 10px;
+}
+
+.slideshow-container img {
+    vertical-align: middle;
+    height: 300px;
+    width: 100%
+}
+
+/* Next & previous buttons */
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -1009,25 +1040,24 @@ classes that adds makes the signup text position in the center and adds some sty
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
+}
+
+/* Position the "next button" to the right */
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  
+}
 
-  /* The dots/bullets/indicators */
-  .dot {
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -1036,33 +1066,45 @@ classes that adds makes the signup text position in the center and adds some sty
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  .dots{
-      text-align: center;
-  }
-  .active, .dot:hover {
+}
+
+.dots {
+    text-align: center;
+}
+
+.active, .dot:hover {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+}
+
+/* Fading animation */
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}

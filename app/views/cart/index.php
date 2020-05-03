@@ -33,5 +33,11 @@
 			<?php
 		}
 		?>
+
+        <div class="section-footer">
+            <a href="/tasbeera/cart/checkout">
+                <button class="btn-style">Checkout</button>
+            </a>
+        </div>
     </div>
 </section>

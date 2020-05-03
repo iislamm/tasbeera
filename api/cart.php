@@ -1,11 +1,12 @@
 <?php
 require_once 'init.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-	print_r($_SESSION);
+function getCart() {
+	global $conn;
 	$sql = "SELECT * FROM cart WHERE id = " . $_SESSION['cartId'];
+//	$sql = "SELECT * FROM cart WHERE id = " . 20;
 	$query_result = $conn->query($sql);
-	$cart = $row = $query_result->fetch_assoc();
+	$cart = $query_result->fetch_assoc();
 
 	$sql = "SELECT * FROM cartitems WHERE cartId=" . $cart['id'];
 	$query_result = $conn->query($sql);
@@ -23,22 +24,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	}
 
 	$cart['items'] = $items;
+	return $cart;
+}
 
+function getItem($id) {
+	global $conn;
+	$sql = 'SELECT * FROM item WHERE id=' . $id;
+	$result = $conn->query($sql);
+
+	if ($result) {
+		return $result->fetch_assoc();
+	}
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+	$cart = getCart();
 	header('Content-Type: application/json');
 	echo json_encode($cart);
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$data = json_decode(file_get_contents('php://input'), true);
+	$cart = getCart();
 	$item_id = $data['id'];
-	$sql = 'INSERT INTO cartitems (itemId, cartId) VALUES (' . $item_id . ', ' . $_SESSION['cartId'] . ')';
-	$result = $conn->query($sql);
-	echo $result;
-	if ($conn->error) {
-		die($conn->error);
+	$item = getItem($item_id);
+
+	if ($item['restaurantId'] == $cart['items'][0]['restaurantId'] || !$cart['items']) {
+
+		$sql = 'INSERT INTO cartitems (itemId, cartId) VALUES (' . $item_id . ', ' . $_SESSION['cartId'] . ')';
+		$result = $conn->query($sql);
+		echo $result;
+		if ($conn->error) {
+			die($conn->error);
+		}
+		echo $result;
+	} else {
+		die("Invalid restaurant");
 	}
-	echo $result;
-	echo $_SESSION['cartId'];
+
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'PUT') {

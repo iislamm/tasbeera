@@ -5,6 +5,9 @@ require_once 'app/models/Restaurant.php';
 class HomeController extends Controller {
 
 	public function index($name = '') {
+		if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'restaurant') {
+			exit(header('Location: /tasbeera/restaurant'));
+		}
 		$restaurantVM = $this->model('RestaurantsViewModel');
 		$restaurants = Restaurant::getAll();
 		$restaurantVM->restaurants = $restaurants;
