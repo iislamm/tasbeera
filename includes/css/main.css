@@ -12,6 +12,9 @@ img {
     max-width: 100%;
 }
 
+button[disabled] {
+    background-color: #777777 !important;
+}
 
 /*
     A class to wrap the elements and keep distance from the edges of the display for clearner display
@@ -530,7 +533,7 @@ section:first-child {
     width: 25%;
 }
 
-.side-pane .item {
+.items-container .item {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
@@ -538,44 +541,48 @@ section:first-child {
     margin-bottom: 16px;
 }
 
-.side-pane .item > * {
+.items-container .item > * {
     display: inline-block;
 }
 
-.side-pane .item * {
+.items-container .item * {
     margin-top: 0;
 }
 
-.side-pane .item-image {
-    grid-column: span 3;
+.items-container .item-image {
+    grid-column: span 2;
     display: flex;
     align-items: center;
 }
 
-.side-pane .item-description {
-    grid-column: span 8;
+.items-container .item-image img {
+    width: 100%;
 }
 
-.side-pane .item-title {
+.items-container .item-description {
+    grid-column: span 9;
+}
+
+.items-container .item-title {
     margin-top: 8px;
     margin-bottom: 4px;
     font-size: 16px;
 }
 
-.side-pane .item-actions {
+.items-container .item-actions {
     display: flex;
     align-items: center;
 }
 
-.side-pane .item-actions > * {
+.items-container .item-actions > * {
     margin-left: 5px;
 }
 
-.side-pane .item-actions select {
+.items-container .item-actions select {
     padding: 5px;
 }
 
-.side-pane .item-actions button {
+.items-container .item-actions button {
     border: none;
     background-color: transparent;
     cursor: pointer;
